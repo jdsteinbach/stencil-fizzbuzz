@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.root {
+  padding: 12px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  font-size: 40px;
+  border-radius: 8px;
+  border: 2px solid #eee;
+}
+
+.incrementor {
+  padding: 12px 24px;
+  flex: 1 0 100%;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 0;
+  border-radius: 8px;
+  background: black;
+  color: white;
+}
+
+.incrementor:hover {
+  background-color: #444;
+}
+
+.value {
+  padding: 12px;
+  flex: 1 0 100%;
+  text-align: center;
+}
+
+.output {
+  flex: 0 1 calc(50% - 6px);
+  padding: 12px 32px;
+  border-radius: 4px;
+  line-height: 1;
+  text-align: center;
+  visibility: var(--active, 'hidden');
+  background-color: var(--bg-color, #444);
+  color: #fff;
+}
