@@ -18,7 +18,7 @@ export namespace Components {
     'fizz': string;
     'fizzColor': string;
     'maximum': number;
-    'start': number;
+    'value': number;
   }
   interface FizzBuzzAttributes extends StencilHTMLAttributes {
     'buzz'?: string;
@@ -26,7 +26,7 @@ export namespace Components {
     'fizz'?: string;
     'fizzColor'?: string;
     'maximum'?: number;
-    'start'?: number;
+    'value'?: number;
   }
 
   interface MyComponent {

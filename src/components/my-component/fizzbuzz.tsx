@@ -1,7 +1,6 @@
 import {
   Component,
   Prop,
-  State,
   Watch
 } from '@stencil/core'
 
@@ -14,26 +13,26 @@ import {
 export class FizzBuzz {
   @Prop() fizzColor: string = 'blue'
   @Prop() buzzColor: string = 'red'
-  @Prop({mutable: true}) fizz: string = 'hidden'
-  @Prop({mutable: true}) buzz: string = 'hidden'
-  @Prop() start: number = 0
+  @Prop({mutable: true}) fizz: string = '0'
+  @Prop({mutable: true}) buzz: string = '0'
+  @Prop({mutable: true}) value: number = 0
   @Prop() maximum: number = 999
-
-  @State() value: number = this.start
 
   @Watch('value')
   valueChange(newValue: number) {
     console.log(newValue)
     this.fizz = ( newValue % 3 > 0 )
-              ? 'hidden'
-              : 'visible'
+              ? '0'
+              : '1'
     this.buzz = ( newValue % 5 > 0 )
-              ? 'hidden'
-              : 'visible'
+              ? '0'
+              : '1'
   }
 
   incrementValue() {
-    this.value = this.value + 1
+    if ( this.value < this.maximum ) {
+      this.value = this.value + 1
+    }
   }
 
   render() {
