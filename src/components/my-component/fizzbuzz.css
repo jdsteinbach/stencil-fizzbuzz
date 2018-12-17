@@ -3,7 +3,7 @@
   font-family: sans-serif;
 }
 
-.root {
+:host {
   padding: 12px;
   display: inline-flex;
   flex-wrap: wrap;

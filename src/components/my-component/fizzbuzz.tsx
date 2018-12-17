@@ -40,13 +40,11 @@ export class FizzBuzz {
   }
 
   render() {
-    return (
-      <div class="root">
-        <button class="incrementor" onClick={() => this.incrementValue()} type="button">Higher!</button>
-        <span class="value">{this.value}</span>
-        <div class="output" style={{'--bg-color': this.fizzColor, '--active': this.fizz}}>Fizz!</div>
-        <div class="output" style={{'--bg-color': this.buzzColor, '--active': this.buzz}}>Buzz!</div>
-      </div>
-    )
+    return [
+      <button class="incrementor" onClick={() => this.incrementValue()} type="button">Higher!</button>,
+      <span class="value">{this.value}</span>,
+      <div class="output" style={{'--bg-color': this.fizzColor, '--active': this.fizz}}>Fizz!</div>,
+      <div class="output" style={{'--bg-color': this.buzzColor, '--active': this.buzz}}>Buzz!</div>
+    ]
   }
 }
